@@ -3,8 +3,10 @@
   и их переопределение под различные устройства
 */
 :root {
-  --accent-color: #ff0070;
-  --title__color-dark: #db00ff;
+  --title-color: #db00ff;
+  --shadow-color: #ff0070;
+  --section__title-color: #ff0070;
   --article__title-color: #000028;
-  --article__description-color: #F1B2CE; 
+  --article__description-color: #f1b2ce;
+  --accent-color: #ff0070;
 }

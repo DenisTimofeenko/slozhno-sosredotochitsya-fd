@@ -16,9 +16,8 @@
 
 .section__title {
   padding-bottom: 20px;
-  color: var(--accent-color);
+  color: var(--section__title-color);
 }
-
 
 .rec__icon,
 .title__description,
@@ -88,6 +87,22 @@
   outline: none;
   color: var(--accent-color);
 }
+.header__theme-menu-button_active {
+  pointer-events: none;
+}
+.header__theme-menu-button:focus {
+  outline: none;
+}
+.header__theme-menu-button:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.header__theme-menu-button:active {
+  outline: 1px solid #ff0070;
+}
+.header__theme-menu-button:hover {
+  outline: 1px solid #ff007066;
+}
 
 .title {
   justify-self: start;
@@ -96,11 +111,11 @@
   letter-spacing: 0;
   padding-bottom: 55px;
   padding-top: 65px;
-  text-shadow: 4px 4px 0 var(--accent-color);
-  color: var(--title__color-dark);
+  text-shadow: 4px 4px 0 var(--shadow-color);
+  color: var(--title-color);
 }
 
-.accent_banner {
+.title-decor {
   background-color: var(--accent-color);
   background-clip: content-box;
   color: var(--article__title-color);
@@ -175,15 +190,17 @@ article {
 
 .footer__title {
   padding: 250px 0;
-  text-shadow: 2px 2px 0 var(--accent-color);
+  text-shadow: 2px 2px 0 var(--shadow-color);
 }
 
 .link {
-  color: yellow;
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--shadow-color);
 }
 
 .link:hover {
-  text-decoration: underline;
+  text-decoration-line: underline;
+  text-underline-offset: 3px;
 }
 
 .link:focus-visible {
@@ -202,9 +219,10 @@ article {
   grid-area: article__list;
 }
 
-
-
 @media (width >= 768px) {
+  .main {
+    row-gap: 82px;
+  }
   .title__description {
     min-inline-size: 364px;
     justify-self: end;
@@ -213,6 +231,8 @@ article {
 
   .title {
     padding: 173px 0 162px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    margin-left: -20px;
   }
 
   .header__theme-menu {
@@ -221,7 +241,7 @@ article {
 
   .section__doubleColumn {
     display: grid;
-    grid-template-columns: 296px 1fr;
+    grid-template-columns: 256px 1fr;
   }
 
   .concentration {
@@ -246,41 +266,18 @@ article {
   .section__second {
     display: grid;
     grid-template-rows: min-content 1fr;
-    grid-template-columns: 296px 1fr;
+    grid-template-columns: 257px 1fr;
     grid-template-areas:
       "title subtitle"
       "title article__list";
   }
-  /* .sunset {
-    grid-area: sunset;
-    max-block-size: 192px;
-  } */
-  /* .ice__cream {
-    grid-area: ice__cream;
-    max-block-size: 472px;
-  } */
-  /* .tape {
-    grid-area: tape;
-  } */
-  /* .books {
-    grid-area: books;
-    max-block-size: 230px; 
-  }*/
-  /* .street {
-    grid-area: street;
-  } */
+  .section__article_sub-title {
+    margin: 0;
+  }
 
-  /* .gallery__list {
-    display: grid;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas:
-      "sunset sunset ice__cream"
-      "tape books ice__cream"
-      "tape street street";
-  } */
+  .gallery {
+    row-gap: 20px;
+  }
   .gallery__collection {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -314,15 +311,44 @@ article {
 
   .page {
     padding: 20px;
+    row-gap: 80px;
   }
   .footer__title {
+    display: flex;
     justify-self: center;
-    padding-bottom: 422px;
+    padding-bottom: 410px;
     padding-top: 422px;
+    margin-left: -8px;
   }
 }
 
 @media (width >= 1024px) {
+  .page {
+    row-gap: 80px;
+  }
+
+  .header__theme-menu {
+    justify-self: center;
+    padding: 0;
+    margin-top: -25px;
+  }
+
+  .header__theme-menu-list {
+    display: flex;
+  }
+  .title {
+    padding: 265px 0 115px;
+  }
+
+  .section__doubleColumn {
+    grid-template-columns: 335px 1fr;
+  }
+  .section__second {
+    grid-template-columns: 335px 1fr;
+  }
+  .section__article_sub-title {
+    padding-bottom: 15px;
+  }
   .concentration {
     grid-template-columns: 315px 1fr;
   }
@@ -332,10 +358,21 @@ article {
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 20px;
   }
+  .title__description {
+    max-inline-size: 491px;
+    white-space: normal;
+    padding-bottom: 90px;
+  }
+  .footer__title {
+    padding: 280px 0 272px;
+  }
 }
 
 @media (prefers-color-scheme: light) {
   .rec__icon {
     display: none;
+  }
+  .page {
+    background-image: var(--bg__image, url("../images/cover-image-light.png"));
   }
 }
