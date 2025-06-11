@@ -255,6 +255,7 @@ article {
 }
 
 @media (width >= 768px) {
+  
   .main {
     margin-top: 60px;
     padding: 0 20px;
@@ -287,6 +288,10 @@ article {
 
   .title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    
+  }
+
+  .header__title {
     margin-left: -20px;
   }
 
@@ -377,7 +382,6 @@ article {
 }
 
 @media (width >= 1024px) {
-
   .header__theme-menu {
     justify-self: center;
     align-self: start;
@@ -418,6 +422,10 @@ article {
   .footer,
   .header {
     min-height: 768px;
+  }
+
+  .footer__title {
+    margin: 0;
   }
 }
 
