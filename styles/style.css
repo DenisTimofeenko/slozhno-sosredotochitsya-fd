@@ -4,6 +4,7 @@
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   font-family: 'IBM Plex mono', sans-serif;
   background-image: var(--bg__image, url(../images/cover-image-dark.png));
+  background-color: var(--bg-color);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -22,7 +23,6 @@
 .title__description {
   font-weight: 700;
   line-height: 23.4px;
-  white-space: pre-line;
   grid-row-start: 3;
   grid-row-end: auto;
   align-self: center;
@@ -50,16 +50,16 @@
   grid-row-end: auto;
 }
 
-.header__theme-menu-item {
+/* .header__theme-menu-item {
   padding-bottom: 11.5px;
-}
+} */
 
 .decorated-zone::before {
   display: block;
   content: '';
   block-size: 25px;
   inline-size: 25px;
-  border: 2px solid var(--accent-color);
+  border: 1px solid var(--accent-color);
   border-left: none;
   border-bottom: none;
   position: absolute;
@@ -72,7 +72,7 @@
   content: '';
   block-size: 25px;
   inline-size: 25px;
-  border: 2px solid var(--accent-color);
+  border: 1px solid var(--accent-color);
   border-right: none;
   border-top: none;
   position: absolute;
@@ -122,9 +122,14 @@
   line-height: 18px;
   letter-spacing: 0;
   text-transform: lowercase;
-  padding: 1.5px 13px;
   outline: none;
   color: var(--accent-color);
+}
+
+.medium__button {
+  padding-bottom: 16px;
+  padding-top: 16px;
+  padding-right: 12px;
 }
 
 .header__theme-menu-button_active {
@@ -185,11 +190,15 @@
   margin-top: 40px;
 }
 
+.footer {
+  margin-top: 40px;
+}
+
 .gallery {
+
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 10px;
-  margin-bottom: 50px;
+  row-gap: 13px;
 }
 
 .gallery__item {
@@ -205,7 +214,7 @@
   row-gap: 20px;
 }
 
-article {
+.article_grid {
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 10px;
@@ -255,7 +264,6 @@ article {
 }
 
 @media (width >= 768px) {
-  
   .main {
     margin-top: 60px;
     padding: 0 20px;
@@ -288,7 +296,6 @@ article {
 
   .title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    
   }
 
   .header__title {
@@ -378,17 +385,28 @@ article {
     padding: 20px;
     min-height: 1024px;
     height: 100vh;
+    margin-top: 60px;
   }
 }
 
 @media (width >= 1024px) {
   .header__theme-menu {
+    /*  NAV */
     justify-self: center;
     align-self: start;
   }
 
   .header__theme-menu-list {
+    /* UL */
     display: flex;
+    flex-direction: row;
+    /* justify-content: end; */
+  }
+
+  .header__theme-menu-item {
+    /* LI */
+
+    justify-self: start;
   }
 
   .section__doubleColumn {
@@ -400,7 +418,7 @@ article {
   }
 
   .section__article_sub-title {
-    padding-bottom: 15px;
+    padding-bottom: 18px;
   }
 
   .concentration {
@@ -416,7 +434,6 @@ article {
 
   .title__description {
     max-inline-size: 491px;
-    white-space: normal;
   }
 
   .footer,
@@ -427,14 +444,12 @@ article {
   .footer__title {
     margin: 0;
   }
-}
 
-@media (prefers-color-scheme: light) {
-  .rec__icon {
-    display: none;
+  .medium__button {
+    padding: 0 30px;
   }
 
-  .page {
-    background-image: var(--bg__image, url(../images/cover-image-light.png));
+  .header__theme-menu-list {
+    padding-top: 2px;
   }
 }
