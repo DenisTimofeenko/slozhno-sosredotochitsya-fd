@@ -190,12 +190,7 @@
   margin-top: 40px;
 }
 
-.footer {
-  margin-top: 40px;
-}
-
 .gallery {
-
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 13px;
@@ -233,6 +228,7 @@
   padding: 10px;
   min-height: 668px;
   position: relative;
+  margin-top: 40px;
 }
 
 .footer__title {
@@ -400,6 +396,7 @@
     /* UL */
     display: flex;
     flex-direction: row;
+    padding-top: 2px;
     /* justify-content: end; */
   }
 
@@ -449,7 +446,5 @@
     padding: 0 30px;
   }
 
-  .header__theme-menu-list {
-    padding-top: 2px;
-  }
+  
 }
