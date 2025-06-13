@@ -298,7 +298,7 @@
     margin-left: -20px;
   }
 
-  .section__doubleColumn {
+  .section__focus {
     display: grid;
     grid-template-columns: 256px 1fr;
   }
@@ -397,7 +397,6 @@
     display: flex;
     flex-direction: row;
     padding-top: 2px;
-    /* justify-content: end; */
   }
 
   .header__theme-menu-item {
@@ -406,7 +405,7 @@
     justify-self: start;
   }
 
-  .section__doubleColumn {
+  .section__focus {
     grid-template-columns: 335px 1fr;
   }
 
