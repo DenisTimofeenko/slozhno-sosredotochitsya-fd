@@ -50,9 +50,7 @@
   grid-row-end: auto;
 }
 
-/* .header__theme-menu-item {
-  padding-bottom: 11.5px;
-} */
+
 
 .decorated-zone::before {
   display: block;
@@ -109,7 +107,7 @@
   display: block;
 }
 
-.articleTitle__bold-reset {
+.bold-reset {
   font-weight: 400;
 }
 
@@ -124,16 +122,13 @@
   text-transform: lowercase;
   outline: none;
   color: var(--accent-color);
+  padding: 1.5px 13px;
 }
 
-.medium__button {
-  padding-bottom: 16px;
-  padding-top: 16px;
-  padding-right: 12px;
-}
 
 .header__theme-menu-button_active {
   pointer-events: none;
+  outline: 1px solid var(--accent-color);
 }
 
 .header__theme-menu-button:focus {
@@ -151,6 +146,12 @@
 
 .header__theme-menu-button:hover {
   outline: 1px solid #ff007066;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .title-decor {
@@ -251,7 +252,8 @@
   outline: 1px solid var(--accent-color);
 }
 
-.section__second_title {
+.title__focus {
+
   grid-area: title;
 }
 
@@ -323,7 +325,7 @@
     grid-column-end: 3;
   }
 
-  .section__second {
+  .section__second {.  /*  ИЗМЕНИТЬ НАЗВАНИЕ КЛАССА */
     display: grid;
     grid-template-rows: min-content 1fr;
     grid-template-columns: 257px 1fr;
@@ -397,6 +399,7 @@
     display: flex;
     flex-direction: row;
     padding-top: 2px;
+    gap: 10px;
   }
 
   .header__theme-menu-item {
@@ -441,9 +444,7 @@
     margin: 0;
   }
 
-  .medium__button {
-    padding: 0 30px;
-  }
+ 
 
   
 }
