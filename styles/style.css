@@ -107,7 +107,7 @@
   display: block;
 }
 
-.articleTitle__bold-reset {
+.bold-reset {
   font-weight: 400;
 }
 
@@ -252,7 +252,7 @@
   outline: 1px solid var(--accent-color);
 }
 
-.section__second_title {  /* ИЗМЕНИТЬ НАЗВАНИЕ КЛАССА*/
+.section__gold-fish-title {  
   grid-area: title;
 }
 
@@ -325,7 +325,7 @@
     grid-column-end: 3;
   }
 
-  .section__second {  /*  ИЗМЕНИТЬ НАЗВАНИЕ КЛАССА */
+  .section__gold-fish {  
     display: grid;
     grid-template-rows: min-content 1fr;
     grid-template-columns: 257px 1fr;
@@ -413,7 +413,7 @@
     grid-template-columns: 335px 1fr;
   }
 
-  .section__second {
+  .section__gold-fish {
     grid-template-columns: 335px 1fr;
   }
 
