@@ -107,7 +107,7 @@
   display: block;
 }
 
-.bold-reset {
+.articleTitle__bold-reset {
   font-weight: 400;
 }
 
@@ -252,8 +252,7 @@
   outline: 1px solid var(--accent-color);
 }
 
-.title__focus {
-
+.section__second_title {  /* ИЗМЕНИТЬ НАЗВАНИЕ КЛАССА*/
   grid-area: title;
 }
 
@@ -262,6 +261,7 @@
 }
 
 @media (width >= 768px) {
+
   .main {
     margin-top: 60px;
     padding: 0 20px;
@@ -325,7 +325,7 @@
     grid-column-end: 3;
   }
 
-  .section__second {.  /*  ИЗМЕНИТЬ НАЗВАНИЕ КЛАССА */
+  .section__second {  /*  ИЗМЕНИТЬ НАЗВАНИЕ КЛАССА */
     display: grid;
     grid-template-rows: min-content 1fr;
     grid-template-columns: 257px 1fr;
@@ -337,7 +337,7 @@
   .section__article_sub-title {
     margin: 0;
   }
-
+  
   .gallery {
     row-gap: 20px;
   }
@@ -388,6 +388,7 @@
 }
 
 @media (width >= 1024px) {
+
   .header__theme-menu {
     /*  NAV */
     justify-self: center;
