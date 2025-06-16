@@ -13,6 +13,10 @@
   --article__description-color: #f1b2ce;
   --accent-color: #ff0070;
   --bg__image: url(../images/cover-image-dark.png);
+  --elegant-angle-color: #ff0070;
+  --button-color: #ff0070;
+  --button-outline-color: #ff0070;
+  --link-color: #ff0070;
 
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
