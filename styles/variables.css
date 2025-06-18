@@ -12,6 +12,7 @@
   --accent-color: #ff0070;
   --elegant-angle-color: #ff0070;
   --button-color: #ff0070;
-  --button-outline-color: #ff0070;
-  --link-color: #ff0070;
+  --button-outline-color:#ff0070;
+  --button-outline-color-hover: #FF007066;
+  --link-color: #F1B2CE;
 }

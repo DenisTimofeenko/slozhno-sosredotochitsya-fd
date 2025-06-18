@@ -16,7 +16,8 @@
   --elegant-angle-color: #ff0070;
   --button-color: #ff0070;
   --button-outline-color: #ff0070;
-  --link-color: #ff0070;
+  --button-outline-color-hover: #ff007066;
+  --link-color: #f1b2ce;
 
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
@@ -24,6 +25,6 @@
   */
 }
 
-.theme-dark .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
+.theme-dark .rec__icon {
+  display: flex;
 }

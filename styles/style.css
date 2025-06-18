@@ -144,7 +144,7 @@
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid var(--button-outline-color);
+  outline: 1px solid var(--button-outline-color-hover);
 }
 
 .header__theme-menu-list {
@@ -236,6 +236,8 @@
   justify-self: center;
   align-self: center;
 }
+
+
 
 .link {
   text-decoration: none;
